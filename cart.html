@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>carts</title>
+    <style>
+        #fullbody{
+            /* display: flex;
+            flex-wrap: wrap; */
+            gap: 50px;
+            height: 700px;
+            width: 70%;
+            margin-left: 15%;
+            position: relative;
+            border: 2px solid black;
+            /* background-color: yellow; */
+        }
+        .first_cart {
+            position: absolute;
+            justify-content: center;
+            margin-top: 200px;
+            margin-left: 100px;
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            /* background-color: rgb(255, 255, 255); */
+        }
+        .second_cart{
+            position: absolute;
+            justify-content: center;
+            margin-top: 200px;
+            margin-left: 400px;
+            height: 200px;
+            width: 200px;
+            border-radius: 2px solid black;
+            background-color: rgb(208, 147, 147);
+        }
+        #firstcart-id{
+            text-align: center;
+             
+            position: absolute;
+            height: 30px;
+            width: 100px;
+            border: 2px solid;
+            margin-top: 410px;
+            margin-left: 100px;
+        }
+        #secondcart-id{
+            text-align: center;
+             
+            position: absolute;
+            height: 30px;
+            width: 100px;
+            border: 2px solid;
+            margin-top: 410px;
+            margin-left: 400px;
+        }
+        .three_cart{
+            position: absolute;
+            justify-content: center;
+            margin-top: 200px;
+            margin-left: 700px;
+            height: 200px;
+            width: 200px;
+            border-radius: 2px solid black;
+            background-color: rgb(208, 147, 147);
+        }
+        #threecart-id{
+            text-align: center;
+             
+             position: absolute;
+             height: 30px;
+             width: 100px;
+             border: 2px solid;
+             margin-top: 410px;
+             margin-left: 700px;
+        }
+        #cart{
+            display: none;
+            height: 700px;
+            width: 300px;
+            background-color: antiquewhite;
+            float: right;
+            overflow: scroll;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="fullbody">
+        <div id="cart">
+            <i class="fa fa-shopping-cart" style="font-size:48px;color:rgb(66, 63, 63);position:sticky;"></i>
+            <div id="inside">
+
+            </div>
+        </div>
+        <div class="first_cart" onclick="firstcart()">
+<p>lendbvhs vhdf vhd sdhv isfvsjv sg sfh vshi fsdhfdshffhdsbf sdhfbsdhfg</p>
+
+        </div>
+        <div id="firstcart-id" onclick="firstcart()">
+            <p style="font-size: 20px;margin-top: -0px;">add to cart</p>
+        </div>
+        
+        <div class="second_cart" onclick="secondcart()">
+
+        </div>
+        <div id="secondcart-id" onclick="secondcart()">
+            <p style="font-size: 20px;margin-top: -0px;">add to cart</p>
+
+        </div>
+        <div class="three_cart" onclick="threecart()">
+
+        </div>
+        <div id="threecart-id" onclick="threecart()">
+            <p style="font-size: 20px;margin-top: -0px;">add to cart</p>
+        </div>
+
+    </div>
+</body>
+<script>
+    let cart1=document.getElementsByClassName('first_cart')[0].innerHTML
+    let cart1btn=document.getElementById('firstcart-id')
+    let element=document.getElementById('inside')
+    let shoppingcart=document.getElementById('cart') 
+    let cart2=document.getElementsByClassName('second_cart')[0].innerHTML
+    let cart2btn=document.getElementById('secondcart-id') 
+    let cart3=document.getElementsByClassName('three_cart')[0].innerHTML
+    let cart3btn=document.getElementById('threecart-id')
+
+    function firstcart(){ 
+    let newdiv=document.createElement('div')
+newdiv.innerHTML=cart1
+newdiv.style.height='150px'
+
+element.appendChild(newdiv)
+cart1=document.getElementsByClassName('first_cart')[0]
+cart2=document.getElementsByClassName('second_cart')[0]
+cart3=document.getElementsByClassName('three_cart')[0]
+// cart1.style.position='relative';
+cart1.style.left='-70px'
+cart1btn.style.left='-70px'
+cart2.style.left='-140px'
+cart2btn.style.left='-140px'
+cart3.style.left='-210px'
+cart3btn.style.left='-210px' 
+shoppingcart.style.display="block"
+
+cart1=document.getElementsByClassName('first_cart')[0].innerHTML
+cart2=document.getElementsByClassName('second_cart')[0].innerHTML
+cart3=document.getElementsByClassName('three_cart')[0].innerHTML
+
+}
+    function secondcart(){
+        
+        let newdiv=document.createElement('div')
+newdiv.innerHTML=cart2
+// cart1.style.position='relative';
+
+newdiv.style.height='150px'
+
+element.appendChild(newdiv)
+cart1=document.getElementsByClassName('first_cart')[0]
+cart2=document.getElementsByClassName('second_cart')[0]
+cart3=document.getElementsByClassName('three_cart')[0]
+
+        
+shoppingcart.style.display="block"
+cart1.style.left='-70px'
+cart1btn.style.left='-70px'
+cart2.style.left='-140px'
+cart2btn.style.left='-140px'
+cart3.style.left='-210px'
+cart3btn.style.left='-210px' 
+
+cart1=document.getElementsByClassName('first_cart')[0].innerHTML
+cart2=document.getElementsByClassName('second_cart')[0].innerHTML
+cart3=document.getElementsByClassName('three_cart')[0].innerHTML
+
+
+}
+    function threecart(){ 
+        let newdiv=document.createElement('div')
+newdiv.innerHTML=cart2
+newdiv.style.height='150px'
+
+
+element.appendChild(newdiv)
+cart1=document.getElementsByClassName('first_cart')[0]
+cart2=document.getElementsByClassName('second_cart')[0]
+cart3=document.getElementsByClassName('three_cart')[0]
+
+
+        cart1.style.left='-70px'
+cart1btn.style.left='-70px'
+cart2.style.left='-140px'
+cart2btn.style.left='-140px'
+cart3.style.left='-210px'
+cart3btn.style.left='-210px'
+
+shoppingcart.style.display="block"
+
+cart1=document.getElementsByClassName('first_cart')[0].innerHTML
+cart2=document.getElementsByClassName('second_cart')[0].innerHTML
+cart3=document.getElementsByClassName('three_cart')[0].innerHTML
+
+
+}
+
+</script>
+</html>
